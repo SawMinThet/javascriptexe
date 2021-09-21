@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let rate = {
+            USD : 1900,
+            SGD : 1200,
+            EUR : 1300
+        };
+        function tommk(amount,currency){
+            let result = amount * rate[currency];
+            let unitresult = result + " mmk";
+            return unitresult;
+        }
+        function fmmk(amount,currency){
+            let result = amount / rate[currency];
+            let unitresult = result +" " +currency;
+            return unitresult;
+        }
+    </script>
+</body>
+</html>

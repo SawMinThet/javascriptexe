@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //area function
+        let x = 0;
+        let record =[];
+
+        function area(width,breadth){
+            let result = width * breadth;
+            let unitresult = result + " sq-ft";
+            record[x] = {
+                width,
+                breadth,
+                area : unitresult
+            };
+            x++;
+            return unitresult;
+        }
+    </script>
+</body>
+</html>

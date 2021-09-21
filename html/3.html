@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = {
+            orange : 500,
+            mango : 300,
+            apple : 400
+        }
+        function total(nos,fruit){
+            let result = nos * fruits[fruit];
+            let tax = result * .05;
+            let finalresult = result+tax;
+            let unitresult = finalresult+" mmk";
+            return {
+                name : fruit,
+                price : fruits[fruit],
+                number : nos,
+                amount : result,
+                tax,
+                total : unitresult
+            };
+        }
+    </script>
+</body>
+</html>
