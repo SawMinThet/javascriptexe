@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="5.js">
+    <link rel="stylesheet" href="5.css">
+</head>
+<body>
+    <div class="box">
+        <h1>Area Calculator</h1>
+        <div class="nav">
+            <span>Result :</span>
+            <span id="result"></span>
+            <button onclick="Clear()">Clear</button>
+            <button onclick="Store()">Store</button>
+        </div><br><br>
+        <div class="middle">
+            <input type="number" id = "width" placeholder="width">
+            <input type="number" id = "height" placeholder="height">
+            <button onclick="Calculate()">Calculate</button>
+        </div>
+        <ul id = "list">
+        </ul>
+    </div> 
+    <script>
+        let l = document.getElementById("width");
+        let h = document.getElementById("height");
+        let result = document.getElementById("result")
+        function Calculate(){
+            if(l.value==""||h.value==""){
+                alert("input the data")
+            }else{
+                let area = l.value * h.value ;
+                result.innerHTML = `${l.value} ft * ${h.value} ft = ${area} ft<sup>2</sup>`;
+
+            }
+        }
+        function Store(){
+            if(result.innerHTML==""){
+                alert("input data")
+            }else{
+                document.getElementById("list").innerHTML += `<li>${result.innerHTML}</li>`;
+                l.value = "";
+                h.value= "";
+                result.innerHTML = "";
+            }
+        }
+        function Clear(){
+                l.value = "";
+                h.value= "";
+                result.innerHTML = "";
+        }
+
+    </script>
+
+</body>
+</html>
