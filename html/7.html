@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="7.css">
+</head>
+<body>
+    <header>
+        <h1 class="brand">MMS IT</h1>
+        <button class="btn" onclick="navControl()">M</button>
+        <div class="nav">
+            <ul>
+                <li><a href="" class="nav-name">Home</a></li>
+                <li><a href="" class="nav-name">About</a></li>
+                <li><a href="" class="nav-name">Services</a></li>
+                <li><a href="" class="nav-name">Gallery</a></li>
+                <li><a href="" class="nav-name">Contact us</a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        let nav = document.getElementsByClassName("nav")[0];
+        function navControl(){
+            nav.classList.toggle("nav-show");
+            
+        }
+    </script>
+    
+</body>
+</html>
