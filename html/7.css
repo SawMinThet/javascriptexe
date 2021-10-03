@@ -6,18 +6,24 @@
     scroll-behavior: smooth;
 }
 body{
-    background-color: #cefff1;
+    background-color: #a6acec;
 }
 header{
     width: 90%;
-    margin: 10px auto;
+    margin: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    background-color: #ace7ef;
+}
+header:hover{
+    background-color: #7ce1ee;
 }
 header .brand{
-    color: #a56cc1;
-    text-shadow: 2px 2px 2px #caa5f1;
+    color: #3426f7;
+    text-shadow: 2px 2px 2px #378af8;
+    font-size: 50px;
 }
 header .btn{
     display: none;
@@ -31,13 +37,17 @@ header .btn{
     padding: 10px;
     margin: 2px;
     color: #ea7dc7;
+    background-color: #cefff1;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.nav li a:hover{
+    background-color: #9df7dd;
 }
 @media screen and (max-width:480px){
     header{
         width: 100%;
-        margin: 5px auto;
+        margin: auto;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -46,8 +56,8 @@ header .btn{
     header .btn{
         display: block;
         padding: 5px;
-        background-color: #cefff1;
-        color: #e02da8;
+        background-color: #ace7ef;
+        color: #3426f7;
         font-weight: bolder;
     }
     .nav{
@@ -61,13 +71,25 @@ header .btn{
         display: block;
         text-decoration: none;
         padding: 10px;
-        margin: 2px;
+        margin-bottom: 5px;
+        background-color: #cefff1;
         color: #ea7dc7;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
-    
 }
 .nav-show{
     display: block;
+    animation: navDropdown 1.5s;
+    position: absolute;
+    top: 63px;
+    z-index: -1;
+}
+@keyframes navDropdown{
+    0%{
+        transform: translateY(-250px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
