@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <!-- <input type="file" id = "upload" multiple>
+     <ul id="list"></ul> -->
+     <form action="" id="test">
+        <input type="text" name="uname"><br>
+        <input type="text" name="password"><br>
+        <button>register</button>
+     </form>
+    <script>
+        document.getElementById("test").addEventListener("submit",function(e){
+            e.preventDefault();
+            let form = new FormData(this);
+            form.append("saww","dfsfsfasf");
+            console.log(form.getAll("uname"));
+            console.log(form.getAll("password"));
+        })
+        // let a = new Audio(`../audio/Beyonce-Halo.mp3`);
+        // document.getElementById("upload").addEventListener("change",function(){
+        //     let upload = this.files;
+        //     console.log(upload);
+        //     for(x of upload){
+        //         console.log(x);
+        //         document.getElementById("list").innerHTML += `<li>${x.name}</li>`;
+        //     }
+        // })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ["x","y","z"];
+
+        let myObj = {
+            name : "Saw Min Thet",
+            age : 32,
+            introduction : function(){
+                return `my name is ${this.name} and ${this.age} years old`;
+            },
+
+        };
+        //class expression
+        class Me{
+            name = "sawminthet";
+            age = 32;
+            //access modifier
+            #gf = "sssssssss";//private property
+
+
+
+            showGf(){
+                return `${this.#gf} is my Girlfriend`;
+            }
+
+            introduction(){
+                return `my name is ${this.name} and ${this.age} years old`;
+            }
+        }
+
+        class Reg{
+            constructor(name,age){
+                this.name = name;
+                this.age = age; 
+                console.log("this is constructor");
+            }
+            //prototype method
+            get showBdy(){
+                let currentYear = 2020;
+                return currentYear-this.age;
+            }
+                    //static method
+            static Test(){
+            return "this is static method";
+        }
+
+        };
+    </script>
+</body>
+</html>
